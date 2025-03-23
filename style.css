@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+:root {
+    --white-color: rgb(231, 227, 227);
+    --red-color: rgb(255, 49, 49);
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}   
+
+body {
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    grid-gap: 3em;
+
+}
+
+header {
+    display: grid;
+    grid-template-rows: 75% 25%;
+    background-color: var(--red-color);
+}
+.header-top {
+    display: grid;
+    grid-template-columns: 25% 65% 5% 5%; 
+    grid-gap: 0.5em;
+    align-items: center;
+} 
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.search-bar {
+    justify-self: start; 
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 90%; 
+    max-width: none; 
+    background-color: var(--white-color);
+}
+
+.search-bar .icon {
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: var(--white-color);
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1.5rem;
+    text-align: start;
+    background-color: var(--white-color);
+}
+
+.user-icon img, .cart-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-icon, .cart-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%; 
+    background-color: var(--white-color);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+}
+
+nav{
+    background-color: black;
+}
+
+nav li {
+    color: var(--white-color); 
+    text-decoration: underline;
+    margin-top: 7px; 
+}
+
+nav a {
+    color: var(--white-color); 
+    text-decoration: underline; 
+    
+}
+
+nav a:visited {
+    color: var(--white-color); 
+}
+
+nav a:hover {
+    color: var(--white-color); 
+}
+
+li {
+    list-style: none;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 10% 50% 20% 20%;
+    grid-gap: 1em;
+}
+
+main > section {
+    margin-bottom: 5em; 
+}
+
+#inicio {
+    height: 60px;
+    margin-bottom: 1em; 
+}
+
+#ofertas {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-gap: 0,5em;
+
+}
+#ofertas h2 {
+    text-align: start;
+}
+
+#ofertas .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    padding: 10px;
+}
+
+#ofertas .offer-card {
+    display: grid;
+    grid-row: 60% 10% 10% 10%;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: black;
+    border: 1px solid black;
+}
+
+#ofertas .offer-card img {
+    width: 100%; 
+    height: 100%; 
+}
+
+#ofertas .offer-card h3 {
+    display: block;
+    margin-top: 10px;
+    margin-left: 5px;
+    text-align: start;
+}
+
+#ofertas .offer-card h2 {
+    display: block;
+    text-align: start;
+    margin-left: 5px;
+}
+
+#ofertas .offer-card a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; 
+    border-radius: 10px;
+    border: 2px solid black;
+   color: black;
+    padding: 10px; 
+    background-color: transparent; 
+    margin-left: 65%; 
+    margin-right: 5%;
+    margin-bottom: 3%;
+}
+
+#ofertas .offer-card a:hover {
+    background-color: #f0f0f0ad; 
+}
+#categorias {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-gap: 0,5em;
+}
+
+#categorias h2 {
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+#categorias .category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+#categorias  .category-card {
+    cursor: pointer;
+}
+
+#categorias  .category-card img {
+    width: 80%; 
+    height: 150px; 
+    border-radius: 5px;
+}
+#categorias  .category-card h3 {
+    display: block;
+    color: black;
+    font-size: 1rem;
+    margin-top: 0.5em;
+    text-align: center
+}
+
+#categorias .category-card:hover {
+    border: 1px solid #f0f0f0ad;
+    border-radius: 5px;
+    background-color: #f0f0f0ad; 
+}
+
+#categorias .category-card:hover h3 {
+    text-decoration: underline;
+    
+}
