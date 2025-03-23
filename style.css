@@ -32,12 +32,11 @@ p {
 
 body {
     display: grid;
-    grid-template-rows: 10% 80% 10%;
-    grid-gap: 3em;
-
+    grid-template-rows: auto auto auto;
 }
 
 header {
+    grid-row: 1;
     display: grid;
     grid-template-rows: 75% 25%;
     background-color: var(--red-color);
@@ -127,18 +126,17 @@ li {
 }
 
 main {
+    grid-row: 2;
     display: grid;
-    grid-template-rows: 10% 50% 20% 20%;
+    grid-template-rows:repeat(4, auto);
     grid-gap: 1em;
-}
-
-main > section {
-    margin-bottom: 5em; 
-}
-
-#inicio {
-    height: 60px;
-    margin-bottom: 1em; 
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    padding: 1em;
+    justify-items: center;
+    align-items: center;
 }
 
 #ofertas {
@@ -152,55 +150,57 @@ main > section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
-    padding: 10px;
 }
 
 #ofertas .offer-card {
     display: grid;
-    grid-row: 60% 10% 10% 10%;
+    grid-template-rows: 40% auto auto auto;
+    grid-gap: 0.5em;
     cursor: pointer;
     border-radius: 5px;
-    border-color: black;
     border: 1px solid black;
 }
 
 #ofertas .offer-card img {
-    width: 100%; 
-    height: 100%; 
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
 }
 
 #ofertas .offer-card h3 {
-    display: block;
-    margin-top: 10px;
-    margin-left: 5px;
+    grid-row: 2;
+    margin: 0.5em 0;
     text-align: start;
+    padding: 5px;
 }
 
 #ofertas .offer-card h2 {
-    display: block;
-    margin-left: 5px;
+    grid-row: 3;
+    margin: 0.5em 0;
+    text-align: start;
+    padding: 5px;
 }
 
 #ofertas .offer-card a {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none; 
-    border-radius: 10px;
-    border: 2px solid black;
+    grid-row: 4;
+    justify-self: end;
+    align-self: end;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid black;
     color: black;
-    padding: 10px; 
-    background-color: transparent; 
-    margin-left: 65%; 
-    margin-right: 5%;
-    margin-bottom: 3%;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 #ofertas .offer-card a:hover {
-    background-color: #f0f0f0ad; 
+    background-color: #f0f0f0ad;
 }
+
 #categorias {
     display: grid;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: auto auto;
     grid-gap: 0,5em;
 }
 
@@ -238,7 +238,7 @@ main > section {
 
 #productos {
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: auto auto;
     grid-gap: 0,5em;
 }
 
@@ -246,7 +246,6 @@ main > section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
-    margin-top: 25px;
     padding: 10px;
     grid-auto-rows: 1fr;
 }
@@ -296,4 +295,37 @@ main > section {
 #productos .product-card a {
     text-decoration: none;
     color: black;
+}
+
+footer {
+    grid-row: 3;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1em;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+
+footer li {
+    margin-bottom: 0.5em;
+}
+
+#contacto {
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-gap: 1em;
+}
+
+#contacto .footer-contact{
+    grid-column: 2;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contacto .footer-contact a{
+    color: black;
+    text-decoration: none;
 }
