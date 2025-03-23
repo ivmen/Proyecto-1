@@ -5,7 +5,6 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 10px;
-    line-clamp: 2;
 }
 
 :root {
@@ -313,7 +312,7 @@ footer li {
 
 #contacto {
     display: grid;
-    grid-template-columns: 20% 40% 40%;
+    grid-template-columns: auto auto auto;
     grid-gap: 1em;
 }
 
@@ -324,6 +323,7 @@ footer li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 #contacto .footer-contact a{
     color: black;
